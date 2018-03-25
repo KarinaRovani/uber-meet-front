@@ -24,12 +24,13 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-md-left text-center align-self-center">
-          <p class="lead text-center text-dark"> Conheça o Uber Meet, faça conexões.
+          <p class="lead text-center text-dark"> Conheça o meet <i>ride</i>, faça conexões.
             <br> O novo serviço da Uber busca aproximar pessoas que tenham destinos semelhantes, aumentando a mobilidade urbana e servindo como facilitador para novas conexões. Veja quem vai para localidades próximas ao destino que você deseja, participe
             do evento e pronto. De maneira rápida, simples e fácil você tem a oportunidade de economizar e interagir com pessoas novas. Se desejar, crie seu próprio evento, determine a regularidade e aguarde que outros usuários participem.
             <br> </p>
           <center>
-            <a href="https://www.facebook.com/dialog/oauth?client_id=815200142005202&redirect_uri=https://karinarovani.github.io/uber-meet-front/eventos.html">Entrar com Facebook</a>          </center>
+            <a href="eventos.html" class="btn mr-auto w-50 py- btn-primary btn-lg text-dark">Login com o Facebook</a>
+          </center>
         </div>
       </div>
     </div>
@@ -38,12 +39,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 my-3">
-          <h1 class="display-4 text-white text-md-left text-center">Aplicativo que une as pessoas</h1>
+          <h1 class="display-4 text-md-left text-center text-dark">Aplicativo que une as pessoas</h1>
         </div>
         <div class="col-md-4  text-center align-self-center">
-          <a href="https://www.facebook.com/uberbr/" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white mx-3"></i></a>
-          <a href="https://twitter.com/uber_brasil" target="_blank"><i class="fa fa-fw fa-twitter fa-3x text-white mx-3"></i></a>
-          <a href="https://www.instagram.com/uber/" target="_blank"><i class="fa fa-fw fa-instagram fa-3x text-white mx-3"></i></a>
+          <a href="https://www.facebook.com/uberbr/" target="_blank"><i class="fa fa-fw fa-facebook fa-3x mx-3 text-dark"></i></a>
+          <a href="https://twitter.com/uber_brasil" target="_blank"><i class="fa fa-fw fa-twitter fa-3x mx-3 text-dark"></i></a>
+          <a href="https://www.instagram.com/uber/" target="_blank"><i class="fa fa-fw fa-instagram fa-3x mx-3 text-dark"></i></a>
         </div>
       </div>
     </div>
@@ -51,7 +52,42 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{your-app-id}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{latest-api-version}'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+      
+      {
+      status: 'connected',
+      authResponse: {
+          accessToken: '...',
+          expiresIn:'...',
+          signedRequest:'...',
+          userID:'...'
+      }
+  }
+      function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  </script>
 </body>
 
 </html>

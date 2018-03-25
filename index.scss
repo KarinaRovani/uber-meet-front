@@ -18,7 +18,7 @@ $enable-print-styles:       true;
 // Colors
 
 $theme-colors: (
-  primary: #2c51be,
+  primary: #D6D6D5,
   secondary: #ffffff,
   light: #f3f3f3,
   dark: #151515,
@@ -38,6 +38,8 @@ $body-color: #000000;
 
 $body-color-inverse: invert($body-color) !default;
 $link-color: #2c51be;
+
+
 
 
 // Fonts
