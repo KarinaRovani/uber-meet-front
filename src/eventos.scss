@@ -22,7 +22,7 @@ $theme-colors: (
   secondary: #000000,
   light: #f3f3f3,
   dark: #151515,
-  info: #f3f3f3,
+  info: #ccc,
   success: #28a745,
   warning: #ffc107,
   danger: #dc3545
@@ -36,6 +36,8 @@ $body-color: #000000;
 
 $body-color-inverse: invert($body-color) !default;
 $link-color: #FF9D00;
+
+
 
 
 
