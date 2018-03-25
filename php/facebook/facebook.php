@@ -1,17 +1,15 @@
 <?php
-require_once( 'model/Usuario.model.php');
-require_once( 'config/conecta.php');
 
 if( $_SERVER['REQUEST_METHOD'] == 'GET' && isset( $_GET['code'] ) ) {
 
   // Informe o seu App ID abaixo
-  $appId = '828770590531960';
+  $appId = '815200142005202';
 
   // Digite o App Secret do seu aplicativo abaixo:
   $appSecret = '185ad7d553e70bb09b1a141c892e6d2f';
 
   // Url informada no campo "Site URL"
-  $redirectUri = urlencode('http://locaisseguros.com.br/beta');
+  $redirectUri = urlencode('https://karinarovani.github.io/uber-meet-front/index.html');
 
   // Obtém o código da query string
   $code = $_GET['code'];
@@ -66,27 +64,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'GET' && isset( $_GET['code'] ) ) {
 
           $oUsuario      = new Usuario( $oDadosUsuario->usuario );
 
-          $_SESSION['lLogado']     = true;
-          $_SESSION['sNome']       = $oUsuario->getNome();
-          $_SESSION['iSequencial'] = $oUsuario->getSequencial();
-          $_SESSION['sEmail']      = $oUsuario->getEmail();
-          $_SESSION['sUsuario']    = $oUsuario->getLogin();
-
-          if( $oUsuario->ultimoLocalPesquisado() != null ) {
-            $_SESSION['iUltimoEstabelecimento'] = $oUsuario->ultimoLocalPesquisado();
-          }
-        } else {
-
-          $aStringEmail = explode( '@', $user->email );
-          $oUsuario     = new Usuario();
-
-          $oUsuario->setNome( $user->name );
-          $oUsuario->setEmail( $user->email );
-          $oUsuario->setLogin( $aStringEmail[0] );
-          $oUsuario->setSenha( $aStringEmail[0] );
-          $oUsuario->salvar();
-          $oUsuario->salvarDadosFacebook( $user );
-        }
+       
 
         header( "location: index.php" );
       }
