@@ -2,98 +2,109 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="eventos.css" type="text/css">
-  <style>
-    .item1 {
-      grid-area: data;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          type="text/css">
+    <link rel="stylesheet" href="eventos.css" type="text/css">
+    <style>
+        .item1 {
+            grid-area: data;
+        }
 
-    .item2 {
-      grid-area: de;
-    }
+        .item2 {
+            grid-area: de;
+        }
 
-    .item3 {
-      grid-area: para;
-    }
+        .item3 {
+            grid-area: para;
+        }
 
-    .item4 {
-      grid-area: user;
-    }
+        .item4 {
+            grid-area: user;
+        }
 
-    .item5 {
-      grid-area: foto;
-    }
+        .item5 {
+            grid-area: foto;
+        }
 
-    .grid-container {
-      display: grid;
-      grid-template-areas: 'data de de para para para' 'data user user user user user';
-      grid-gap: 1px;
-      background-color: #2c51BE;
-      padding: 1px;
-    }
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'data de de para para para' 'data user user user user user';
+            grid-gap: 1px;
+            background-color: #2c51BE;
+            padding: 1px;
+        }
 
-    .grid-container>div {
-      background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      padding: 20px 0;
-      font-size: 30px;
-    }
-  </style>
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+<nav class="navbar navbar-expand-md bg-secondary navbar-dark">
     <div class="container">
-      <div class="">
-        <img class="img-fluid d-block" src="logo-top.png"> </div>
-      <center>
-        <a href="informacoes.html" class="btn btn-primary float-right text-light">Criar Evento</a>
-      </center>
+        <div class="">
+            <img class="img-fluid d-block" src="img/logo-top.png"></div>
+        <center>
+            <a href="informacoes.html" class="btn btn-primary float-right text-light">Criar Evento</a>
+        </center>
     </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent"> </div>
-  </nav>
-  <div class="px-2">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+</nav>
+<div class="px-2">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="display-1 p-4">
-            <font size="10">
-              <center>Confira Todos os Eventos</center>
-            </font>
-          </h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-1 p-4">
+                    <font size="10">
+                        <center>Confira Todos os Eventos</center>
+                    </font>
+                </h1>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="grid-container">
+</div>
+<div class="grid-container">
     <div class="item1">
-      <br>
-      <a href="informacoes.html">
-        <img class="d-block rounded mx-auto img-fluid" src="26.png" width="150" height="150"> </a>
+        <br>
+        <a href="informacoes.html">
+            <img class="d-block rounded mx-auto img-fluid" src="img/26.png" width="150" height="150"> </a>
     </div>
     <div class="item2"><b>De:</b> Rua Mostardeiro</div>
     <div class="item3"><b>Para:</b> PUC</div>
     <div class="item4 p-3">
-      <img class="img-fluid d-block rounded-circle float-left" src="ricardoFranco.jpg" width="100" height="50"><b> Por:</b> Ricardo Franco </div>
-  </div>
-  <br>
-  <div class="grid-container">
+        <img class="img-fluid d-block rounded-circle float-left" src="img/ricardoFranco.jpg" width="100" height="50"><b>
+        Por:</b> Ricardo Franco
+    </div>
+</div>
+<br>
+<div class="grid-container">
     <div class="item1">
-      <br>
-      <a href="informacoes.html">
-        <img class="img-fluid d-block rounded mx-auto" src="27.png" width="150" height="150"> </a>
+        <br>
+        <a href="informacoes.html">
+            <img class="img-fluid d-block rounded mx-auto" src="img/27.png" width="150" height="150"> </a>
     </div>
     <div class="item2"><b>De:</b> Rua Avaí</div>
     <div class="item3"><b>Para:</b> Rua Uruguai &nbsp; &nbsp;</div>
     <div class="item4 p-3">
-      <img class="img-fluid d-block rounded-circle float-left" src="pedroHenrique.jpg" width="100" height="50"><b> Por:</b> Pedro Henrique </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <img class="img-fluid d-block rounded-circle float-left" src="img/pedroHenrique.jpg" width="100" height="50"><b>
+        Por:</b> Pedro Henrique
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
