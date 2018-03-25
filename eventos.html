@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="eventos.css" type="text/css">
+  <style>
+    .item1 {
+      grid-area: data;
+    }
+
+    .item2 {
+      grid-area: de;
+    }
+
+    .item3 {
+      grid-area: para;
+    }
+
+    .item4 {
+      grid-area: user;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas: 'data de de para para para' 'data user user user user user';
+      grid-gap: 1px;
+      background-color: #2196F3;
+      padding: 1px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+    <div class="container">
+      <img class="img-fluid d-block" src="logo-top.png">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <form class="form-inline m-0">
+            <button class="btn btn-primary" type="submit">Criar Evento</button>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-1">
+            <center>Confira Todos os Eventos</center>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="item1">Menu</div>
+    <div class="item2">Main</div>
+    <div class="item3">Right</div>
+    <div class="item4">Footer</div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

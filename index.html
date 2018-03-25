@@ -17,11 +17,20 @@
   <div class="py-5 text-white bg-secondary">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 text-md-left text-center align-self-center my-5">
-          <h1 class="display-1 text-center">Uber</h1>
-          <p class="lead text-center">Aplicativo de mobilidade
+        <div class="col-md-12">
+          <center>
+            <img class="img-fluid d-block" src="logo-pagina-login.png" height="50" width="300"> </center>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-md-left text-center align-self-center">
+          <p class="lead text-center text-dark"> Conheça o Uber Meet, faça conexões.
+            <br> O novo serviço da Uber busca aproximar pessoas que tenham destinos semelhantes, aumentando a mobilidade urbana e servindo como facilitador para novas conexões. Veja quem vai para localidades próximas ao destino que você deseja, participe
+            do evento e pronto. De maneira rápida, simples e fácil você tem a oportunidade de economizar e interagir com pessoas novas. Se desejar, crie seu próprio evento, determine a regularidade e aguarde que outros usuários participem.
             <br> </p>
-          <a href="#" class="btn mr-auto w-50 py- btn-primary btn-lg">Login com o Facebook</a>
+          <center>
+            <a href="eventos.html" class="btn mr-auto w-50 py- btn-primary btn-lg">Login com o Facebook</a>
+          </center>
         </div>
       </div>
     </div>
@@ -44,6 +53,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{your-app-id}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{latest-api-version}'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+      
+      {
+      status: 'connected',
+      authResponse: {
+          accessToken: '...',
+          expiresIn:'...',
+          signedRequest:'...',
+          userID:'...'
+      }
+  }
+      function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  </script>
 </body>
 
 </html>
